@@ -1,0 +1,51 @@
+
+
+<div class="row center-xs">
+	<div class="col-xs-8 col-md-6">
+	<h1> Infomación  del usuario <h1>
+			<div class="CSSTableGenerator center">
+
+			                <table >
+			                    <tr>
+			                        <td>
+			                            Nombre
+			                        </td>
+			                        <td >
+			                            Correo
+			                        </td>
+			                        <td>
+			                            Ciudad
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <td >
+			                           <%= @user.name %>
+			                        </td>
+			                        <td>
+			                           <%= @user.email %>
+			                        </td>
+			                        <td>
+			                            <%= @user.city %>
+			                        </td>
+			                    </tr>
+			                    
+			                </table>
+			           
+			</div>
+	</div>
+ </div>
+
+</div> 
+<div class="row center-xs">
+	<div class="col-xs-8 col-md-6">
+		<div class="box text-left">
+				<%= link_to "<button>Editar</button>".html_safe, edit_user_registration_path, :id => "button_id", :class => "button_class" %>
+		</div>
+	</div>
+</div>
+		
+
+
+
+
+			

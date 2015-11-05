@@ -1,0 +1,29 @@
+<div class="container-fluid">
+<%= form_tag search_index_path, :method => 'get' do %>
+	<%=select_tag(:search, options_for_select(CS.states(:cl).map{ |key,value| [value] }),:prompt=>"Seleccione una ciudad")%>
+	
+	<%= submit_tag "Buscar" %>
+<%end%>
+</div>
+<div class="container-fluid">
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>email</th>
+			<th>Ciudad</th>
+			<th colspan="3"></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @users.each do |user| %>
+		 	<tr>
+				<td><%=user.name %></td>
+				<td><%=user.email %></td>
+				<td><%=user.city %></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
+</div>

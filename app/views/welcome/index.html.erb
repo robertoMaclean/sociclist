@@ -1,0 +1,8 @@
+<% if user_signed_in? %>
+	<h2 class="container-fluid"> Bienvenido <%= current_user.name %>, Comienza a buscar compañeros para realizar entretenidos viajes en bicicleta.</h2>	
+<% else %>
+<h1 align="center"> Registrate en sociclist y pertenece a la comunidad mas grande de ciclistas en Chile.</h1>
+<div class="imagen_logo", align="center" style="position:relative; top:100px;"> 
+   <%= image_tag "logo-ciclismo.png", :alt => "Sociclist", :title => "Sociclist"%>
+</div>	        
+<%end%>

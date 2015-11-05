@@ -1,0 +1,25 @@
+
+		<nav class="header" id="header">
+	        <h1 class="site_title" id="site_title">Sociclist</h1>
+		        <ul class="header-item tabs" id="tabs">         
+		         	<li id="index"><%= link_to "Inicio", root_path %></li>
+		         	<li id="search"><%= link_to "Buscar", search_index_path %></li>
+		          <% if not user_signed_in? %>
+		          <li id="sign_in"><%= link_to "Iniciar sesión", new_user_session_path %></li>
+		          <li id="sign_up"><%= link_to "Registrarse", new_user_registration_path %></li>
+		          <%end%>
+		          
+		         </ul>
+	        	<ul class="header-item tabs" id="utility_nav">
+	          	
+			         <% if user_signed_in? %>
+			         <li id="current_user"><%= link_to current_user.email, current_user %></li>
+			         <li id="logout"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></li>
+					<%end%>
+	          		
+	          	<ul>
+	        
+	    </nav>
+
+		
+	
